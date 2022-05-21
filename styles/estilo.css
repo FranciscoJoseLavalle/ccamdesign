@@ -142,9 +142,8 @@ h3 {
 
 .nav {
     display: flex;
-    /* flex-direction: column;
-    width: 100%;
-    justify-content: flex-end; */
+    flex-direction: column;
+    align-items: center;
 }
 .ocultar {
     display: none;
