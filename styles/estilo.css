@@ -134,7 +134,29 @@ h3 {
         font-size: 2.5rem;
     }
 }
+@media (max-width: 750px) {
+    .header__nav-ul {
+        display: none;
+    }
+}
 
+.nav {
+    display: flex;
+    /* flex-direction: column;
+    width: 100%;
+    justify-content: flex-end; */
+}
+.ocultar {
+    display: none;
+}
+.navbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.navbtn img {
+    width: 2.5rem;
+}
 /* --------------Header-------------- */
 
 
