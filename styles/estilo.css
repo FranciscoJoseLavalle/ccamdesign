@@ -1,12 +1,16 @@
 /* --------------Fuentes-------------- */
 @font-face {
-    font-family: "Bellerose"; /* Para titulos */
+    font-family: "Bellerose";
+    /* Para titulos */
     src: url("../fonts/Bellerose/Bellerose.ttf") format("truetype");
 }
+
 @font-face {
-    font-family: "Nesans"; /* Para textos */
+    font-family: "Nesans";
+    /* Para textos */
     src: url("../fonts/Nesans/Nesans.ttf") format("truetype");
 }
+
 /* --------------Fuentes-------------- */
 
 /* --------------Globales-------------- */
@@ -18,35 +22,49 @@
     --blanco: #fff;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Nesans';
     font-size: 1.5rem;
     text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
 }
+
 body {
     background-color: var(--colorCuarto);
 }
 
 /* Titles */
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Bellerose';
 }
-h1, h1 span {
+
+h1,
+h1 span {
     font-size: 2.7rem;
     margin-top: -2.7rem;
     color: var(--blanco);
 }
+
 h2 {
     font-size: 2rem;
     margin-top: -2rem;
 }
+
 h3 {
     font-size: 1.5rem;
     margin-top: -1.5rem;
 }
+
 /* Titles */
 
 /* --------------Globales-------------- */
@@ -54,13 +72,16 @@ h3 {
 /* --------------Header-------------- */
 .header {
     background: linear-gradient(90deg, var(--colorCuarto), var(--colorTerciario), var(--colorPrincipal), var(--colorTerciario), var(--colorCuarto));
+    margin-bottom: 3rem;
 }
+
 .header__nav {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 .header__nav-ul {
     display: flex;
     justify-content: space-evenly;
@@ -69,38 +90,129 @@ h3 {
     padding: 1.5rem 0;
     background-color: #0006;
     backdrop-filter: blur(.08rem);
-    position: sticky;
     top: 0;
-    list-style: none;
 }
+
 .header__nav-ul a {
     color: var(--blanco);
     padding: .25rem 0;
     position: relative;
 }
+
 .header__nav-ul a::after {
     position: absolute;
     bottom: 0;
     left: 50%;
-    display: flex;
-    justify-content: center;
     content: '';
     width: 0;
     height: .2rem;
     background-color: var(--colorTerciario);
     transition: all .3s;
 }
+
 .header__nav-ul a:hover::after {
     left: 0;
     width: 100%;
 }
+
 .header__nav-title a {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 .header__nav-title a img {
     width: 10rem;
 }
+
+@media (max-width: 345px) {
+    .header__nav-title a img {
+        width: 8rem;
+    }
+    h1, h1 span {
+        font-size: 2.5rem;
+    }
+}
+
 /* --------------Header-------------- */
+
+
+/* --------------Main-------------- */
+/* Sobre Nosotros */
+.main__sobreNosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: linear-gradient(180deg, var(--colorSecundario), var(--colorPrincipal) 70%);
+    gap: 2rem;
+    justify-content: center;
+    color: var(--blanco)
+}
+
+.main__sobreNosotros-text {
+    padding: 1.5rem;
+}
+
+.main__sobreNosotros .img {
+    width: 100%;
+    height: 100%;
+}
+
+.main__sobreNosotros img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 750px) {
+    .main__sobreNosotros {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 345px) {
+    .main__sobreNosotros h2 {
+        font-size: 1.8rem;
+        margin-top: -1.8rem;
+    }
+}
+
+/* Sobre Nosotros */
+
+/* Servicios */
+.main__servicios {
+    margin: 3rem 0;
+}
+.main__servicios-texto {
+    padding: 1rem;
+}
+.main__servicios h2 {
+    text-align: center;
+}
+.main__servicios ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 8rem);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.main__servicios ul div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main__servicios img {
+    width: 3rem;
+}
+@media (min-width: 1391px) {
+    .main__servicios ul {
+        display: flex;
+    }
+}
+/* Servicios */
+/* --------------Main-------------- */

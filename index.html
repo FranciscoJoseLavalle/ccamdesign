@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ccam Design</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/estilo.css">
 </head>
 
@@ -13,9 +14,9 @@
     <header class="header">
         <nav class="header__nav">
             <ul class="header__nav-ul">
-                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#sobreNosotros">Sobre Nosotros</a></li>
                 <li><a href="#">Contacto</a></li>
-                <li><a href="#">Servicios</a></li>
+                <li><a href="#servicios">Servicios</a></li>
                 <!-- <li><a href="#">Términos y condiciones</a></li> -->
                 <li><a href="#">Trabajos</a></li>
                 <!-- <li><a href="#">Política de privacidad</a></li> -->
@@ -30,20 +31,55 @@
     </header>
 
     <main class="main">
-        <section class="main__sobreNosotros">
-            <h2>Sobre Nosotros</h2>
-            <p>Somos un Estudio Creativo enfocado en crear la identidad de tu marca y hacerte crecer en el amplio mundo de las redes sociales.</p>
-            <p>¡Estamos listos para ayudarte y guiarte durante el proceso!</p>
+        <section class="main__sobreNosotros" id="sobreNosotros">
+            <div class="main__sobreNosotros-text">
+                <h2>Sobre Nosotros</h2>
+                <p>Somos un Estudio Creativo enfocado en crear la identidad de tu marca y hacerte crecer en el amplio
+                    mundo de las redes sociales.</p>
+                <p>¡Estamos listos para ayudarte y guiarte durante el proceso!</p>
+            </div>
+            <div class="img">
+                <img src="./img/sobreNosotros.png" alt="Sobre Nosotros">
+            </div>
         </section>
-        <section class="main__servicios">
-            <h2>Servicios</h2>
-            <p>Desde Cam Design brindamos distintos tipos de servicios que te ayudarán a posicionar tu marca de la mejor forma posible.</p>
+        <section class="main__servicios" id="servicios">
+            <div class="main__servicios-texto">
+                <h2>Servicios</h2>
+                <p>Desde Cam Design brindamos distintos tipos de servicios que te ayudarán a posicionar tu marca de la
+                    mejor
+                    forma posible.</p>
+            </div>
             <ul>
-                <li>Community Management</li>
-                <li>Diseño Gráfico</li>
-                <li>Publicidad</li>
-                <li>Marketing</li>
-                <li>Desarrollo web</li>
+                <li data-aos="flip-up" data-aos-delay="75">
+                    <div>
+                        <p>Community Management</p>
+                        <img src="./img/community.png" alt="Community Manager">
+                    </div>
+                </li>
+                <li data-aos="flip-down" data-aos-delay="125">
+                    <div>
+                        <p>Diseño Gráfico</p>
+                        <img src="./img/diseño.png" alt="Diseño Gráfico">
+                    </div>
+                </li>
+                <li data-aos="flip-up" data-aos-delay="150">
+                    <div>
+                        <p>Publicidad</p>
+                        <img src="./img/anuncios.png" alt="Publicidad">
+                    </div>
+                </li>
+                <li data-aos="flip-down" data-aos-delay="200">
+                    <div>
+                        <p>Marketing</p>
+                        <img src="./img/marketing.png" alt="Marketing">
+                    </div>
+                </li>
+                <li data-aos="flip-up" data-aos-delay="300">
+                    <div>
+                        <p>Desarrollo web</p>
+                        <img src="./img/coding.png" alt="Desarrollo Web">
+                    </div>
+                </li>
             </ul>
         </section>
         <section class="main__trabajos">
@@ -57,6 +93,13 @@
     <footer class="footer">
 
     </footer>
+
+    <!-- AOS Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- AOS Scripts -->
 
     <script src="./app/app.js"></script>
 </body>
