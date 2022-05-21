@@ -64,6 +64,7 @@ h3 {
 .header__nav-ul {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     width: 100%;
     padding: 1.5rem 0;
     background-color: #0006;
